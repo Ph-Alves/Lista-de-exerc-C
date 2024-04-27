@@ -1,25 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int charTexto(char texto[]){
+int comprChar(char s[60]){
   int tamanho = 0;
-  while (texto[tamanho] != '\0'){
+  while (s[tamanho] != '\0'){
 	tamanho++;
   }
+  tamanho--;
   return tamanho;
 }
 
 
 int main (void){
 
-  char texto[60];
+  char s[60];
 
   printf("Digite uma palavra: ");
-  scanf("%s", texto[60]);
+  fflush(stdin);
+  fgets(s, sizeof(s), stdin);
 
-  int tamanho = charTexto(texto);
+  int tamanho = comprChar(s);
 
-  printf("O texto: %s tem %i caracteres.", texto, tamanho);
+  printf("essa palavra tem %i caracteres!", tamanho);
 
   return 0;
 }
