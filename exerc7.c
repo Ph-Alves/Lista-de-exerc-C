@@ -27,9 +27,6 @@ int main (void){
   printf("Digite a letra que quer apagar da palavra: ");
   scanf("%c", &letra);
   fflush(stdin);
-  
-  printf("Teste: %c\n", letra);
-  printf("Teste: %s\n", palavra);
 
   strdel(palavra, letra);
 
