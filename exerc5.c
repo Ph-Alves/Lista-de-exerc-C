@@ -17,9 +17,9 @@ int main() {
 
     printf("Digite uma palavra: ");
     scanf("%s", s);    
-    // fgets(s, sizeof(s), stdin);
+    fgets(s, sizeof(s), stdin);
     printf("Digite outra palavra: ");
-    // fgets(t, sizeof(s), stdin);
+    fgets(t, sizeof(s), stdin);
     scanf("%s", t);
 
     strconct(s, t);
